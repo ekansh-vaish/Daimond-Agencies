@@ -35,7 +35,8 @@ app.use(session(sessionOptions));
 app.use(flash());
 app.use(express.json());
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: ["daimond-agencies-moxb.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 
