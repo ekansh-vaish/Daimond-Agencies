@@ -34,7 +34,7 @@ formData.append("price",newData.price);
 formData.append('file',image);  
 
 try {
-const res = await axios.post("http://localhost:8080/product", formData,
+const res = await axios.post(" https://daimond-agenciessbd.onrender.com/product", formData,
 {
 headers:{
 "Content-Type" : 'multipart/form-data'

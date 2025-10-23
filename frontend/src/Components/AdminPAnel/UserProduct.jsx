@@ -20,7 +20,7 @@ size: ''
 // Fetch products
 async function Productget() {
 try {
-const res = await axios.get('http://localhost:8080/getproducts');
+const res = await axios.get(' https://daimond-agenciessbd.onrender.com/getproducts');
 setProduct(res.data);
 } catch (err) {
 console.error('Error fetching products:', err);
@@ -30,7 +30,7 @@ console.error('Error fetching products:', err);
 // Delete product
 async function DeleteListing(id) {
 try {
-await axios.delete(`http://localhost:8080/removeproduct/${id}`);
+await axios.delete(` https://daimond-agenciessbd.onrender.com/removeproduct/${id}`);
 toast.success("Product deleted successfully!");
 Productget();
 } catch (error) {
@@ -54,7 +54,7 @@ setShowModal(true);
 async function handleUpdate(e) {
 e.preventDefault();
 try {
-await axios.put(`http://localhost:8080/update/${selectedId}`, updatedData);
+await axios.put(` https://daimond-agenciessbd.onrender.com/update/${selectedId}`, updatedData);
 toast.success("Product updated successfully!");
 Productget();
 setShowModal(false);

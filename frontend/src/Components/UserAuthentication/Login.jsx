@@ -25,7 +25,7 @@ setLogin((prev => ({...prev,[name] : value})))
 async function LoginForm (e) {
 e.preventDefault();
 try {
-const result = await axios.post("http://localhost:8080/login", login);
+const result = await axios.post(" https://daimond-agenciessbd.onrender.com/login", login);
 
 
 // Backend se JWT token aur role milega

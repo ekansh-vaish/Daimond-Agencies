@@ -20,7 +20,7 @@ navigate('/login');
 async function SearchProduct(e) {
 e.preventDefault();
 try {
-const res = await axios.get(`http://localhost:8080/search/${search}`);
+const res = await axios.get(` https://daimond-agenciessbd.onrender.com/search/${search}`);
 setSearchResult(res.data);
 } catch (error) {
 console.log(error);

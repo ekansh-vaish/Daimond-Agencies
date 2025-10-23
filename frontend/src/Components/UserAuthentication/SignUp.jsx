@@ -14,7 +14,6 @@ password : ""
 }
 );
 
-const [error, setError] = useState("");
 
 function handleChange(e)
 {
@@ -26,7 +25,7 @@ setRegister((prev => ({...prev,[name] : value})))
 async function RegisterForm (e) {
 e.preventDefault();
 try{
-let result = await axios.post("http://localhost:8080/signup",register)
+let result = await axios.post("https://daimond-agenciessbd.onrender.com/signup",register)
 console.log(result);
 navigate("/login")
 }

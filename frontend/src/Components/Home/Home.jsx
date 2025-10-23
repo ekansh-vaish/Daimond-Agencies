@@ -14,7 +14,7 @@ const navigate = useNavigate();
 
 async function Productget() {
 try {
-const res = await axios.get("http://localhost:8080/getproducts");
+const res = await axios.get(" https://daimond-agenciessbd.onrender.com/getproducts");
 setProduct(res.data);
 } catch (err) {
 console.log("Fetch error:", err);

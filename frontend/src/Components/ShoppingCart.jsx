@@ -23,7 +23,7 @@ fullAddress: ''
 useEffect(() => {
 async function fetchItem() {
 try {
-const res = await axios.post(`http://localhost:8080/cart/${id}`);
+const res = await axios.post(` https://daimond-agenciessbd.onrender.com/cart/${id}`);
 setCartItem(res.data);
 setIsLoading(false);
 } catch (err) {
@@ -35,7 +35,7 @@ fetchItem();
 
 const handleRemove = async () => {
 try {
-await axios.delete(`http://localhost:8080/itemdelete/${id}`);
+await axios.delete(` https://daimond-agenciessbd.onrender.com/itemdelete/${id}`);
 localStorage.removeItem("Cart");
 alert("Item removed from cart");
 navigate("/product");
@@ -53,7 +53,7 @@ return;
 }
 
 try {
-const res = await axios.post("http://localhost:8080/payment");
+const res = await axios.post(" https://daimond-agenciessbd.onrender.com/payment");
 const approvalUrl = res.data.links[1].href;
 window.location.href = approvalUrl;
 } catch (err) {
